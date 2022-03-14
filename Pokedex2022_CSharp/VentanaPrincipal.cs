@@ -41,6 +41,13 @@ namespace Pokedex2022_CSharp
             pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
         }
 
+        private void botonInfo_Click(object sender, EventArgs e)
+        {
+            
+            Ventana2 v = new Ventana2();
 
+            v.cambiaDescripcionPokemon(misPokemons.Rows[0]["descripcion"].ToString() ); 
+            v.Show();
+        }
     }
 }
